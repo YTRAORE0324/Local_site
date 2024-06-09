@@ -1,0 +1,24 @@
+.elementor-element-wrapper.elementor-element--promotion,
+a.elementor-plugins-gopro,
+.elementor-panel-menu-items .elementor-panel-menu-item.elementor-panel-menu-item-site-editor,
+
+/* .elementor-panel-menu-items .elementor-panel-menu-item.elementor-panel-menu-item-theme-style-buttons, */
+
+#elementor-panel-global,
+#elementor-panel-elements-navigation div[data-tab="global"],
+#elementor-panel-get-pro-elements,
+#elementor-panel-category-theme-elements,
+#elementor-panel-category-pro-elements {
+    display: none;
+}
+
+#select2-elementor-template-library-filter-subtype-results .select2-results__option:nth-child(1),
+#select2-elementor-template-library-filter-subtype-results .select2-results__option:nth-child(3),
+#select2-elementor-template-library-filter-subtype-results .select2-results__option:nth-child(17),
+#select2-elementor-template-library-filter-subtype-results .select2-results__option:nth-child(18),
+#select2-elementor-template-library-filter-subtype-results .select2-results__option:nth-child(20),
+#select2-elementor-template-library-filter-subtype-results .select2-results__option:nth-child(21),
+#select2-elementor-template-library-filter-subtype-results .select2-results__option:nth-child(22),
+#select2-elementor-template-library-filter-subtype-results .select2-results__option:nth-child(27) {
+    display: none!important;
+}

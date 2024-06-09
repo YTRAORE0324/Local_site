@@ -1,0 +1,1649 @@
+/*---------------------------------- Stylesheet Guide ---------------------------------
+
+1.  GENERAL
+2.  WELCOME PANEL
+3.  DASHBOARD
+4.  DEMOS
+5.  SYSTEM STATUS
+6.  PLUGINS
+7.  HELP
+8.  RESPONSIVE
+
+/* --------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------------- 
+1.  GENERAL
+--------------------------------------------------------------------------------- */
+
+#adminmenu a[href^="admin.php?page=elementskit-license"],
+body.toplevel_page_keydesign-dashboard #wpfooter,
+body[class*='keydesign_page_'] #wpfooter,
+.notice.wpmet-notice,
+#elementskit-lite-_plugin_rating_msg_used_in_day,
+.notice-elementskit-pro-not-active {
+    display: none!important;
+}
+
+.toplevel_page_keydesign-dashboard .notice,
+.keydesign_page_theme-options .notice,
+.keydesign_page_install-required-plugins .notice,
+.keydesign_page_import-demos .notice,
+.keydesign_page_keydesign-system-status .notice,
+.keydesign_page_keydesign-help .notice {
+    display: none;
+}
+
+.keydesign_page_import-demos .ocdi__response .notice {
+    display: block;
+}
+
+#adminmenu .toplevel_page_keydesign-dashboard {
+    display: none;
+}
+
+body.toplevel_page_keydesign-dashboard,
+body[class*='keydesign_page_'] {
+    background-color: var(--admin-main-color-light);
+    color: var(--admin-main-color-text);
+}
+
+body.toplevel_page_keydesign-dashboard h1,
+body[class*='keydesign_page_'] h1,
+body[class*='keydesign_page_'] h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--admin-main-color-heading);
+}
+
+body.toplevel_page_keydesign-dashboard h1,
+body[class*='keydesign_page_'] h1 {
+    font-size: 42px;
+}
+
+body.toplevel_page_keydesign-dashboard .kdadmin-dashboard h2,
+body[class*='keydesign_page_'] .kdadmin-dashboard h2 {
+    font-size: 28px;
+}
+
+.keydesign-notice a,
+.keydesign_page_install-required-plugins .keydesign-plugins a,
+.kdadmin-help a,
+.keydesign-system-status table.widefat a,
+.kdadmin-welcome-box a,
+.toplevel_page_keydesign-dashboard .notice a,
+body[class*='keydesign_page_'] .notice a {
+    color: var(--admin-main-color);
+    text-decoration: none;
+    transition: var(--admin-transition);
+    font-weight: 600;
+    box-shadow: none;
+    outline: none;
+}
+
+.keydesign-notice a:hover,
+.keydesign_page_install-required-plugins .keydesign-plugins a:hover,
+.kdadmin-help a:hover,
+.kdadmin-welcome-box a:hover,
+.keydesign-system-status table.widefat a:hover,
+.toplevel_page_keydesign-dashboard .notice a:hover,
+body[class*='keydesign_page_'] .notice a:hover {
+    color: var(--admin-secondary-color);
+}
+
+
+/* #adminmenu a.toplevel_page_keydesign-dashboard, */
+
+#adminmenu li.wp-has-current-submenu a.toplevel_page_keydesign-dashboard {
+    background: var(--admin-main-color)!important;
+}
+
+#adminmenu a.wp-has-current-submenu.toplevel_page_keydesign-dashboard:after {
+    display: none;
+}
+
+#adminmenu .toplevel_page_keydesign-dashboard .wp-menu-image {
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#adminmenu .toplevel_page_keydesign-dashboard .wp-menu-name {
+    font-size: 0;
+}
+
+#adminmenu .toplevel_page_keydesign-dashboard .wp-menu-name::before {
+    font-size: 14px;
+}
+
+.wp-core-ui.toplevel_page_keydesign-dashboard .notice.is-dismissible,
+.wp-core-ui[class*='keydesign_page_'] #message,
+.wp-core-ui[class*='keydesign_page_'] .notice.is-dismissible {
+    padding-right: 38px;
+    position: relative;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: var(--admin-cards-border-radius);
+    background: #fff;
+    border: 1px solid var(--admin-main-color-border);
+    box-shadow: none;
+    color: var(--admin-main-color-heading);
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: 1240px;
+    margin-left: 20px;
+}
+
+.wp-core-ui[class*='keydesign_page_'] .keydesign-plugins #message {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.wp-core-ui[class*='keydesign_page_'] .kdadmin-dashboard .notice.is-dismissible {
+    margin-left: 0;
+}
+
+.wp-core-ui.toplevel_page_keydesign-dashboard .notice.is-dismissible p,
+.wp-core-ui[class*='keydesign_page_'] .notice.is-dismissible p {
+    margin: 10px 0px 15px 0;
+    font-size: 14px;
+}
+
+.keydesign-notice,
+.keydesign-activate-theme-notice,
+.keydesign_page_import-demos .ocdi__response .notice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: var(--admin-cards-border-radius);
+    background: #ffffff;
+    margin-top: 0;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--admin-main-color-border);
+    max-width: 1240px;
+    margin-left: 20px;
+    padding-left: 25px;
+}
+
+.keydesign-deactivate-notice {
+    margin: 0 0 20px 0;
+    max-width: 816px;
+}
+
+.keydesign-deactivate-notice strong {
+    color: var(--admin-main-color-heading);
+}
+
+.keydesign_page_import-demos .ocdi__response .notice {
+    margin-left: 0;
+    margin-top: 50px;
+}
+
+.keydesign-notice.keydesign-export {
+    margin-top: 30px;
+    display: none;
+}
+
+.keydesign-notice.keydesign-export pre {
+    word-break: break-all;
+    white-space: inherit;
+}
+
+.keydesign-activate-theme-notice p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--admin-main-color-heading);
+    font-size: 18px;
+}
+
+.keydesign-notice p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* --------------------------------------------------------------------------------- 
+2.  WELCOME PANEL
+--------------------------------------------------------------------------------- */
+
+.keydesign-welcome-panel {
+    margin: 35px 0 40px 20px;
+    max-width: 1240px;
+    position: relative;
+}
+
+.keydesign-welcome-panel .welcome-panel-description {
+    line-height: 1.5;
+    font-size: 19px;
+    margin: 13px 0 15px 0;
+    max-width: 750px;
+}
+
+.keydesign-welcome-panel .keydesign-theme-thumb {
+    border-radius: var(--admin-cards-border-radius);
+    border: 1px solid var(--admin-main-color-border);
+    background: #fff;
+    width: 140px;
+    height: 168px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    right: 0;
+    top: 0;
+}
+
+.keydesign-welcome-panel .keydesign-theme-thumb img {
+    max-width: 70px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.keydesign-welcome-panel .keydesign-theme-version {
+    color: var(--admin-main-color);
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 0;
+    background: var(--admin-main-color-transparent);
+    padding: 4px 8px;
+    border-radius: var(--admin-cards-border-radius);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.keydesign-dashboard-tabs .keydesign-dashboard-tabs-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+    margin: 30px 0;
+}
+
+.keydesign-dashboard-tabs .keydesign-dashboard-tabs-list li {
+    margin: 0;
+    display: flex;
+}
+
+.keydesign-dashboard-tabs .keydesign-dashboard-tabs-list a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.keydesign-dashboard-tabs .keydesign-dashboard-tabs-list a {
+    font-weight: 400;
+    padding: 10px 0px;
+    margin-right: 30px;
+    font-size: 18px;
+    line-height: 1.5;
+    float: none;
+    border-width: 0 0 3px;
+    border-style: solid;
+    border-color: transparent;
+    background: 0 0;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    color: var(--admin-main-color-heading);
+    transition: var(--admin-transition);
+}
+
+.keydesign-dashboard-tabs .keydesign-dashboard-tabs-list a:hover {
+    border-color: var(--admin-primary-color);
+}
+
+.toplevel_page_keydesign-dashboard .keydesign-dashboard-tabs-list .dashboard-tab a,
+.keydesign_page_install-required-plugins .keydesign-dashboard-tabs-list .plugins-tab a,
+.keydesign_page_keydesign-help .keydesign-dashboard-tabs-list .help-tab a,
+.keydesign_page_keydesign-system-status .keydesign-dashboard-tabs-list .system-status-tab a,
+.keydesign_page_theme-options .keydesign-dashboard-tabs-list .theme-options-tab a,
+.keydesign_page_import-demos .keydesign-dashboard-tabs-list .demos-tab a {
+    font-weight: 600;
+    color: var(--admin-main-color);
+    border-color: var(--admin-main-color);
+}
+
+
+/* --------------------------------------------------------------------------------- 
+3.  DASHBOARD
+--------------------------------------------------------------------------------- */
+
+.keydesign-activate-theme-notice .keydesign-button,
+.keydesign-notice .keydesign-button,
+.keydesign-plugins .button,
+.kdadmin-dashboard #mc_embed_signup .button,
+.keydesign_page_import-demos .ui-dialog .ui-button:not(.button-primary),
+.keydesign_page_import-demos .ui-dialog .ui-button.button-primary,
+.keydesign_page_import-demos .ui-widget-content.ui-dialog-buttonpane .ui-button.ui-state-default,
+.keydesign_page_import-demos .ui-widget-content.ui-dialog-buttonpane .button.ui-state-default.button-primary,
+.kdadmin-activate-column input[type="submit"],
+.admin-color-fresh .ui-widget-content .ui-state-default.kdadmin-button,
+.kdadmin-import .ocdi__gl-item-button,
+.kdadmin-import .ocdi__gl-item-button.button-primary,
+.kdadmin-dashboard .kdadmin-button {
+    background: #fff;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: var(--admin-button-border-radius);
+    white-space: nowrap;
+    box-sizing: border-box;
+    outline: none !important;
+    padding: 0 20px;
+    margin: 0 5px;
+    background: var(--admin-main-color);
+    border-color: var(--admin-main-color);
+    box-shadow: none;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 500;
+    line-height: 36px;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    min-width: 120px;
+    text-align: center;
+    transition: var(--admin-transition)
+}
+
+.kdadmin-activate-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.kdadmin-activate-wrapper .kdadmin-activate-column:only-child {
+    width: 100%;
+    max-width: 816px;
+}
+
+.keydesign-activation-form {
+    display: inline-flex;
+    max-width: 100%;
+    width: 100%;
+}
+
+.keydesign-activation-form label {
+    font-weight: 600;
+    color: var(--admin-main-color-heading);
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.kdadmin-panel-column .keydesign-activation-form p {
+    margin-bottom: 0;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.kdadmin-panel-column .keydesign-activation-form p.submit-field {
+    width: auto;
+}
+
+.kdadmin-panel-column .keydesign-activation-form p.submit-field .button {
+    margin-top: 32px;
+}
+
+.kdadmin-activate-wrapper .kdadmin-panel-column {}
+
+.kdadmin-dashboard .kdadmin-button {
+    margin-right: auto;
+}
+
+.keydesign-notice .keydesign-button:hover,
+.keydesign-activate-theme-notice .keydesign-button:hover,
+.keydesign-plugins .button:hover,
+.kdadmin-dashboard #mc_embed_signup .button:hover,
+.keydesign_page_import-demos .ui-dialog .ui-button:not(.button-primary):hover,
+.keydesign_page_import-demos .ui-dialog .ui-button.button-primary:hover,
+.keydesign_page_import-demos .ui-widget-content.ui-dialog-buttonpane .ui-button.ui-state-default:hover,
+.keydesign_page_import-demos .ui-widget-content.ui-dialog-buttonpane .button.ui-state-default.button-primary:hover,
+.kdadmin-activate-column input[type="submit"]:hover,
+.admin-color-fresh .ui-widget-content .ui-state-default.kdadmin-button:hover,
+.kdadmin-import .ocdi__gl-item-button:hover,
+.kdadmin-import .ocdi__gl-item-button.button-primary:hover,
+.kdadmin-dashboard .kdadmin-button:hover {
+    background: var(--admin-secondary-color);
+    border-color: var(--admin-secondary-color);
+    color: #fff;
+}
+
+.keydesign_page_import-demos .ui-dialog .ui-button:not(.button-primary),
+.kdadmin-import .ocdi__gl-item-button:not(.button-primary) {
+    background: var(--admin-main-color-transparent);
+    box-shadow: none;
+    color: var(--admin-main-color);
+    border: none;
+    line-height: 40px;
+}
+
+.keydesign_page_import-demos .ui-dialog .ui-button:not(.button-primary):hover,
+.kdadmin-import .ocdi__gl-item-button:not(.button-primary):hover {
+    background: var(--admin-secondary-color);
+}
+
+.kdadmin-dashboard-box {
+    width: calc(33.33% - 15px);
+    display: inline-block;
+    margin-right: 15px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    float: left;
+    min-height: 280px;
+    border-radius: var(--admin-cards-border-radius);
+}
+
+.kdadmin-dashboard-box ul a {
+    text-decoration: none;
+    color: var(--admin-main-color);
+}
+
+.kdadmin-dashboard-box ul a:hover {
+    color: #333;
+}
+
+.kdadmin-welcome-box {
+    padding: 0;
+    border-radius: var(--admin-cards-border-radius);
+    padding-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    margin-top: 0;
+    background-color: transparent;
+    max-width: 1240px;
+    margin-left: 20px;
+    float: none;
+    box-shadow: none;
+}
+
+.kdadmin-dashboard p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.kdadmin-column-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kdadmin-documentation a,
+.kdadmin-panel-column {
+    position: relative;
+    display: inline-block;
+    width: 33%;
+    box-sizing: border-box;
+    border-radius: var(--admin-cards-border-radius);
+    background: #fff;
+    border: 1px solid var(--admin-main-color-border);
+    margin-top: 0;
+    width: calc(33.3% - 20px);
+    margin-right: 30px;
+    padding: 30px;
+    transition: var(--admin-transition);
+    display: inline-flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.kdadmin-panel-column p {
+    margin-bottom: 20px;
+}
+
+.kdadmin-panel-column p.welcome-message {
+    margin-bottom: 0;
+}
+
+.kdadmin-dashboard-title {
+    font-weight: 400;
+    font-size: 28px;
+    padding: 0;
+    margin: 40px 0 !important;
+    line-height: 32px;
+}
+
+.kdadmin-panel-column.system-requirements {
+    width: calc(50% - 25px);
+    padding: 33px 35px 28px 50px;
+}
+
+.kdadmin-panel-column:hover {}
+
+.kdadmin-dashboard .kdadmin-column-container h2 {
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--admin-main-color-heading);
+    margin: 30px 0;
+    font-size: 26px;
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+body.toplevel_page_keydesign-dashboard .kdadmin-dashboard .kdadmin-column-container h2 {
+    font-size: 24px;
+}
+
+.kdadmin-dashboard .kdadmin-column-container h2.first-title {
+    margin-top: 0;
+}
+
+.kdadmin-documentation a .cat-icon,
+.kdadmin-panel-column .dashboard-icon {
+    font-size: 32px;
+    color: var(--admin-main-color);
+    display: block;
+    margin-bottom: 25px;
+    display: flex;
+    width: fit-content;
+    background: var(--admin-main-color-transparent);
+    padding: 15px;
+    border-radius: var(--admin-cards-border-radius);
+}
+
+.kdadmin-help h3,
+.kdadmin-panel-column h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 18px;
+    color: var(--admin-main-color-heading);
+}
+
+.kdadmin-panel-column:last-child {
+    margin-right: 0;
+}
+
+.kdadmin-dashboard-box:last-child {
+    margin-right: 0;
+}
+
+.kdadmin-dashboard .kdadmin-req-wrapper .dashicons {
+    margin-right: 10px;
+    background: var(--admin-main-color);
+    text-decoration: none;
+    line-height: 19px;
+    color: #fff;
+    border-radius: 90px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+    width: 18px;
+    height: 18px;
+}
+
+.kdadmin-dashboard .kdadmin-req-wrapper .dashicons-warning {
+    color: red;
+    background: #fff;
+    font-size: 20px;
+}
+
+.kdadmin-activate-column {
+    padding: 30px;
+    border-radius: var(--admin-cards-border-radius);
+    background: #ffffff;
+    margin-top: 0;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid var(--admin-main-color-border);
+}
+
+.kdadmin-activate-column h3 {}
+
+.kdadmin-activate-column h3.activated {
+    color: var(--admin-main-color);
+    margin-bottom: 0;
+}
+
+.kdadmin-activate-column a.deactivate-theme,
+.kdadmin-dashboard .deactivate-theme .dashicons {
+    color: #ff1053;
+}
+
+.kdadmin-activate-column a.deactivate-theme:hover,
+.kdadmin-dashboard .deactivate-theme:hover .dashicons {
+    color: #1f1f1f;
+}
+
+.kdadmin-activate-column a.deactivate-theme {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.kdadmin-activate-column input[type="text"] {
+    border: none;
+    width: 100%;
+    box-shadow: none;
+    outline: none;
+    line-height: 38px;
+    border-radius: var(--admin-button-border-radius);
+    padding-left: 10px;
+    box-shadow: none;
+    padding: 0 15px;
+    margin-right: 8px;
+    border: 1px solid var(--admin-main-color-border);
+    background: var(--admin-main-color-transparent);
+}
+
+.kdadmin-activate-column input[type="text"]+.description {
+    margin-top: 8px;
+    display: block;
+}
+
+.kdadmin-activate-column input[type="text"]:focus {
+    border-color: var(--admin-main-color);
+}
+
+.kdadmin-activate-column a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--admin-main-color);
+    outline: none;
+    text-decoration: underline;
+    outline: none !important;
+}
+
+.kdadmin-activate-column .dashicons {
+    text-decoration: none !important;
+    margin-right: 5px;
+}
+
+.kdadmin-activate-column a:hover {
+    color: var(--admin-secondary-color);
+    outline: none;
+}
+
+.kdadmin-activate-column.kdadmin-activate-column-import {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.kdadmin-activate-column.kdadmin-activate-column-import h3 {
+    margin-bottom: 0;
+}
+
+.kdadmin-code-error {
+    display: block;
+    margin-top: 20px;
+    color: #ff1053;
+    font-weight: 600;
+}
+
+.kdadmin-req-wrapper .sys-label,
+.kdadmin-req-wrapper .sys-current {
+    width: 49%;
+    display: inline-flex;
+    cursor: default;
+}
+
+.kdadmin-req-wrapper .sys-current {
+    font-weight: 600;
+    color: #000
+}
+
+.kdadmin-req-wrapper .sys-row {
+    line-height: 25px;
+    position: relative;
+}
+
+.kdadmin-req-wrapper .sys-desc {
+    position: absolute;
+    background: #fff;
+    padding: 15px;
+    border-radius: var(--admin-cards-border-radius);
+    left: 0;
+    z-index: 10;
+    transition: var(--admin-transition);
+    transform: translate(-110%, -30%);
+    top: 0;
+    display: none;
+    border: 1px solid var(--admin-main-color-border);
+    background-color: var(--admin-main-color-transparent);
+}
+
+.kdadmin-req-wrapper .sys-label:hover+.sys-desc {
+    display: block;
+}
+
+.kdadmin-dashboard .ocdi__gl-item-image-container::after {
+    padding-top: 450px;
+    background: var(--admin-main-color-heading);
+}
+
+.kdadmin-dashboard .ocdi__gl-item[data-categories="sliders"] {
+    display: none;
+}
+
+.kdadmin-dashboard .ocdi__gl-item[data-categories="sliders"] .ocdi__gl-item-image-container::after {
+    padding-top: 230px
+}
+
+.kdadmin-dashboard #mc_embed_signup div.mce_inline_error {
+    position: absolute;
+    background: transparent;
+    color: var(--admin-main-color);
+}
+
+.kdadmin-dashboard #mc_embed_signup_scroll {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.kdadmin-dashboard #mc_embed_signup input[type="email"] {
+    border: 1px solid var(--admin-main-color-border);
+    border-radius: var(--admin-cards-border-radius);
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    background: var(--admin-main-color-transparent);
+}
+
+.keydesign-plugins #bulk-action-selector-bottom,
+.keydesign-plugins #bulk-action-selector-top {
+    border: 1px solid var(--admin-main-color-border);
+    border-radius: var(--admin-cards-border-radius);
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+}
+
+.kdadmin-dashboard #mc_embed_signup .button {
+    margin-left: 5px;
+}
+
+.kdadmin-dashboard #mce-responses {
+    position: absolute;
+    top: 0;
+    font-weight: 600;
+    color: var(--admin-main-color);
+    font-size: 14px;
+    line-height: 40px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 10;
+}
+
+.toplevel_page_keydesign-dashboard #TB_title {
+    padding: 15px;
+    font-size: 16px;
+    color: var(--admin-main-color-heading);
+}
+
+.toplevel_page_keydesign-dashboard #TB_window li .Improved {
+    color: #00ad1d
+}
+
+.toplevel_page_keydesign-dashboard #TB_window li .Added {
+    color: #0099e5
+}
+
+.toplevel_page_keydesign-dashboard #TB_window li .Fixed {
+    color: #e74c3c
+}
+
+.toplevel_page_keydesign-dashboard #TB_window li .Update {
+    color: #faa700
+}
+
+.toplevel_page_keydesign-dashboard #TB_window li span {
+    font-weight: 600;
+}
+
+.toplevel_page_keydesign-dashboard #TB_window ul {
+    margin-top: 20px;
+    list-style-type: circle;
+    color: var(--admin-main-color-heading);
+    padding-left: 30px;
+}
+
+.toplevel_page_keydesign-dashboard #TB_window li {
+    font-size: 16px;
+    padding-left: 10px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+@media (max-width:1024px) {
+    .kdadmin-dashboard-box {
+        width: 100%;
+        min-height: inherit;
+    }
+    .kdadmin-import .ocdi__gl-navigation,
+    .kdadmin-import .ocdi__gl-item-footer--with-preview h4.ocdi__gl-item-title,
+    .kdadmin-import .kdadmin-welcome-box,
+    .kdadmin-welcome-box,
+    .kdadmin-activate-column,
+    .kdadmin-panel-column {
+        width: 100%;
+    }
+    .kdadmin-activate-column a.deactivate-theme {
+        position: relative;
+        right: inherit;
+        top: inherit;
+        margin-top: 20px;
+        display: block;
+    }
+    .kdadmin-import .ocdi__gl-header {
+        padding-bottom: 20px;
+    }
+}
+
+
+/* --------------------------------------------------------------------------------- 
+3.  IMPORT DEMOS
+--------------------------------------------------------------------------------- */
+
+.kdadmin-dashboard.kdadmin-import {
+    max-width: 1240px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.kdadmin-import .ocdi__gl-item-container {
+    margin-right: 0;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-column-gap: 29px;
+    grid-row-gap: 30px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.kdadmin-import .ocdi__gl-header {
+    display: inline-block;
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: var(--admin-cards-border-radius);
+    border: 1px solid var(--admin-main-color-border);
+    box-sizing: border-box;
+}
+
+.kdadmin-import .ocdi__gl-search-input {
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    margin: 0;
+    margin-top: 10px;
+    box-shadow: none !important;
+    border-radius: var(--admin-button-border-radius);
+    outline: none;
+    padding: 0;
+    padding-left: 20px;
+    width: 100%;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    background: var(--admin-main-color-transparent);
+    margin-bottom: 10px;
+    float: right;
+}
+
+.kdadmin-import .ocdi__gl-search-input:focus {
+    outline: none;
+    border-color: var(--admin-main-color-border);
+}
+
+.kdadmin-import .ocdi__gl-navigation {
+    width: calc(100% - 300px);
+    display: none;
+}
+
+.kdadmin-import .ocdi__gl-navigation li.active a,
+.ocdi__gl-navigation li.active a:hover {
+    border-bottom: 3px solid var(--admin-main-color);
+}
+
+.kdadmin-import .ocdi__gl-navigation li a {
+    padding: 19px 20px 20px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--admin-main-color-heading);
+}
+
+.kdadmin-import .ocdi__gl-navigation li a:hover {
+    color: var(--admin-main-color);
+}
+
+.kdadmin-import .ocdi__gl-header {
+    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.kdadmin-import .kdadmin-welcome-box {
+    margin: auto;
+    width: 100%;
+    box-shadow: none;
+    float: none;
+    box-shadow: none;
+    margin-left: 0;
+}
+
+.kdadmin-import .kdadmin-welcome-box ul {
+    list-style: inherit;
+    padding-left: 20px;
+}
+
+.kdadmin-import .ocdi__gl-item-footer {
+    margin: 0;
+    padding: 15px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #fff;
+    border-top: 1px solid var(--admin-main-color-border);
+    height: 40px;
+    text-align: left;
+}
+
+.kdadmin-import .ocdi__gl-item {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /* -webkit-box-sizing: border-box; */
+    -moz-box-sizing: border-box;
+    /* box-sizing: border-box; */
+    border-radius: var(--admin-cards-border-radius);
+    border: 1px solid var(--admin-main-color-border);
+    margin: 0;
+    width: 100%;
+    float: none;
+    overflow: hidden;
+}
+
+.kdadmin-import .ocdi__gl-item img {
+    transition: var(--admin-transition);
+}
+
+.kdadmin-import .ocdi__gl-item:hover img {}
+
+.kdadmin-import .ocdi__gl-item-image-container {
+    max-height: 392px;
+    aspect-ratio: 1;
+}
+
+.kdadmin-import .ocdi__gl-item-button.button-primary {
+    height: 40px;
+    margin-left: 8px;
+    min-width: 80px;
+}
+
+.kdadmin-import .ocdi__gl-item-button {
+    height: 40px;
+    min-width: 80px;
+}
+
+.kdadmin-import .ocdi__gl-item-button:hover {
+    color: #fff;
+}
+
+.kdadmin-import .ocdi__gl-item-footer--with-preview h4.ocdi__gl-item-title {
+    width: auto;
+    margin: 0;
+    font-weight: 600;
+    line-height: 40px;
+    margin-left: 0;
+    font-size: 15px;
+    text-align: left;
+    color: var(--admin-main-color-heading);
+}
+
+#js-ocdi-modal-content {
+    width: 450px !important;
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+.keydesign-import-form .import-form-subtitle {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #7a7a7a;
+    max-width: 400px;
+    font-weight: 500;
+}
+
+.keydesign-import-form label {
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    outline: none;
+}
+
+.keydesign-import-form label input {
+    margin-right: 10px;
+    outline: none;
+}
+
+.ocdi__modal-item-title {
+    font-size: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.ocdi__modal-image-container {
+    height: auto !important;
+    border-radius: var(--admin-cards-border-radius);
+}
+
+.ocdi__modal-image-container img {
+    border-radius: var(--admin-cards-border-radius);
+}
+
+.keydesign_page_import-demos .ui-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100102;
+    box-shadow: none;
+    border-radius: var(--admin-cards-border-radius);
+    overflow: hidden;
+}
+
+.keydesign_page_import-demos .ui-dialog-titlebar {
+    background: #eaeaea;
+    border-bottom: none;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 50px;
+    padding: 0 36px 0 16px;
+    color: #fff;
+    background: var(--admin-main-color);
+}
+
+.keydesign_page_import-demos .ui-button.ui-dialog-titlebar-close {
+    background: none !important;
+    color: #fff;
+}
+
+.keydesign_page_import-demos .ui-dialog-buttonpane {
+    padding: 10px;
+    background: #fff;
+    border-top: none;
+}
+
+.keydesign_page_import-demos .ui-dialog .ui-dialog-titlebar:not(.button-primary) .ui-button {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    min-width: 40px;
+}
+
+.keydesign_page_import-demos .ui-dialog .ui-button.button-primary,
+.keydesign_page_import-demos .ui-widget-content.ui-dialog-buttonpane .ui-button.ui-state-default.button-primary {
+    margin-left: 10px;
+}
+
+.keydesign_page_import-demos .ui-dialog .ui-button:not(.button-primary):hover,
+.keydesign_page_import-demos .ui-dialog .ui-dialog-titlebar:not(.button-primary) .ui-button {
+    -webkit-text-fill-color: #fff;
+    outline: none;
+    border: none;
+}
+
+.keydesign_page_import-demos .ui-widget-content.ui-dialog-buttonpane .ui-button.ui-state-default:hover {
+    color: #fff;
+}
+
+.keydesign_page_import-demos .ui-dialog .ui-button,
+.keydesign_page_import-demos .ui-widget-content .ui-button.ui-state-default {
+    height: 40px;
+}
+
+.ocdi__gl h3 {
+    margin: 30px 0 20px;
+}
+
+.kdadmin-dashboard .ocdi__ajax-loader {
+    margin-top: 20px;
+}
+
+.ocdi__response .notice {
+    margin: 30px 0 0;
+}
+
+
+/* --------------------------------------------------------------------------------- 
+5.  SYSTEM STATUS
+--------------------------------------------------------------------------------- */
+
+.keydesign-system-status {
+    max-width: 1240px;
+    margin-left: 20px;
+}
+
+.keydesign-plugins table.widefat,
+.keydesign-system-status table.widefat {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    color: var(--admin-main-color-text);
+    border-color: var(--admin-main-color-border);
+    border-radius: var(--admin-cards-border-radius);
+    box-shadow: none;
+}
+
+.keydesign-plugins table.widefat thead td,
+.keydesign-plugins table.widefat th,
+.keydesign-plugins table.widefat thead tr th,
+.keydesign-system-status table.widefat thead tr th {
+    font-weight: 600;
+    color: var(--admin-main-color-heading);
+    border-color: var(--admin-main-color-border);
+}
+
+.keydesign-plugins table.widefat td,
+.keydesign-plugins table.widefat th,
+.keydesign-system-status table.widefat td,
+.keydesign-system-status table.widefat th {
+    padding: 10px 15px;
+}
+
+.keydesign-system-status table.widefat td:first-child {
+    width: 25%;
+}
+
+.keydesign-system-status table.widefat td.help {
+    width: 40px;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.keydesign-system-status table.widefat td.help i {
+    color: #a1a1a1;
+    font-size: 18px;
+    height: 18px;
+    position: relative;
+}
+
+.keydesign-plugins table.widefat tr:nth-child(2n),
+.keydesign-system-status table.widefat tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+.keydesign-system-status table.widefat mark.no {
+    color: #ff1053;
+    background: transparent;
+    font-weight: 600;
+}
+
+.keydesign-system-status table.widefat tbody mark.yes {
+    color: #72BF40;
+    background: transparent;
+    font-weight: 600;
+}
+
+.keydesign-system-status table.widefat mark strong {
+    font-weight: 600;
+}
+
+.keydesign-system-status table.widefat td.help i[title]:hover {
+    color: var(--admin-main-color);
+}
+
+.keydesign-system-status table.widefat td.help i[title]:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.keydesign-system-status table.widefat td.help i[title]:after {
+    content: attr(title);
+    position: absolute;
+    top: 50%;
+    left: 28px;
+    transform: translateY(-50%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: var(--admin-main-color-heading);
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid var(--admin-main-color-border);
+    padding: 8px 12px;
+    border-radius: var( --admin-button-border-radius);
+    white-space: nowrap;
+    background: #fff;
+    font-weight: 600;
+    transition: var(--admin-transition);
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* --------------------------------------------------------------------------------- 
+6.  PLUGINS
+--------------------------------------------------------------------------------- */
+
+.keydesign_page_install-required-plugins .keydesign-plugins {
+    margin: 0;
+    margin-left: 20px;
+    max-width: 1240px;
+}
+
+.keydesign_page_install-required-plugins .keydesign-plugins h2:first-child {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.keydesign_page_install-required-plugins .keydesign-plugins table.widefat {
+    margin-top: 30px;
+}
+
+.keydesign_page_install-required-plugins .keydesign-plugins table.widefat a {
+    font-size: 14px;
+}
+
+.keydesign_page_install-required-plugins .keydesign-plugins table.widefat strong a {
+    font-size: 16px;
+    color: var(--admin-main-color-heading);
+}
+
+.keydesign_page_install-required-plugins .keydesign-plugins .subsubsub {
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.keydesign_page_install-required-plugins .keydesign-plugins .subsubsub a .count {
+    color: var(--admin-main-color-heading);
+    font-weight: 400;
+}
+
+.keydesign_page_install-required-plugins .keydesign-plugins table.widefat tfoot,
+.keydesign_page_install-required-plugins .keydesign-plugins .tablenav.top {
+    display: none;
+}
+
+.keydesign-plugins table.widefat td,
+.keydesign-plugins table.widefat th {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    vertical-align: middle;
+}
+
+.keydesign-plugins table.widefat P {
+    margin: 0;
+}
+
+.keydesign-plugins #bulk-action-selector-bottom,
+.keydesign-plugins #bulk-action-selector-top {
+    min-width: 200px;
+}
+
+
+/* --------------------------------------------------------------------------------- 
+7.  HELP
+--------------------------------------------------------------------------------- */
+
+.kdadmin-help {
+    max-width: 1260px;
+    display: flex;
+}
+
+.kdadmin-help .kdadmin-docs-wrapper {
+    flex-basis: 64%;
+}
+
+.kdadmin-help .kdadmin-documentation {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.kdadmin-help .kdadmin-support-box {
+    flex-basis: 36%;
+}
+
+.kdadmin-help .kdadmin-support-info {
+    box-sizing: border-box;
+    border-radius: var(--admin-cards-border-radius);
+    background: #fff;
+    border: 1px solid var(--admin-main-color-border);
+    margin-top: 0;
+    padding: 30px;
+    transition: var(--admin-transition);
+    display: inline-flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.kdadmin-help .kdadmin-support-info ul li {
+    line-height: 1.75;
+    margin-bottom: 10px;
+}
+
+.kdadmin-help .kdadmin-support-info p {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.kdadmin-help .kdadmin-support-info h3 {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+.kdadmin-help ul {
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+.kdadmin-help .kdadmin-support-info i {
+    font-size: 16px;
+    margin-right: 3px;
+    transform: translateY(2px);
+    display: inline-block;
+}
+
+.kdadmin-help .kdadmin-support-info .lnricons-checkmark-circle {
+    color: #00ad1d
+}
+
+.kdadmin-help .kdadmin-support-info .lnricons-cross-circle {
+    color: #e74c3c;
+}
+
+.kdadmin-help .kdadmin-panel-column {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.kdadmin-panel-column .support-badge {
+    padding: 5px 8px;
+    background: #e74c3c;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: white;
+    font-weight: 600;
+    border-radius: var(--admin-cards-border-radius);
+    font-size: 15px;
+}
+
+.kdadmin-panel-column .support-badge.active {
+    background: #00ad1d;
+}
+
+.kdadmin-panel-column hr {
+    background: var(--admin-main-color-border);
+    height: 1px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.kdadmin-panel-column p .expired {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.kdadmin-panel-column p .active {
+    color: #00ad1d;
+    font-weight: 600;
+}
+
+.kdadmin-documentation a {
+    color: var(--admin-main-color-heading);
+    font-size: 16px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+}
+
+.kdadmin-documentation a:hover {
+    color: var(--admin-main-color);
+}
+
+.kdadmin-documentation a:hover i {
+    color: #fff;
+    background-color: var(--admin-main-color);
+}
+
+.kdadmin-documentation a .cat-icon {
+    margin-bottom: 22px;
+    transition: var(--admin-transition);
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.kdadmin-documentation ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 14px;
+    max-width: 700px;
+}
+
+.kdadmin-documentation ul li:nth-child(1) a .cat-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='-0.5 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 22.32c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10ZM2 12.32h20' stroke='%231A1A1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 22.32c1.933 0 3.5-4.477 3.5-10s-1.567-10-3.5-10-3.5 4.477-3.5 10 1.567 10 3.5 10Z' stroke='%231A1A1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+}
+
+.kdadmin-documentation ul li:nth-child(2) a .cat-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.658 9.286c1.44.9 2.16 1.35 2.407 1.926a2 2 0 0 1 0 1.576c-.247.576-.967 1.026-2.407 1.926L9.896 18.94c-1.598.999-2.397 1.498-3.056 1.445a2 2 0 0 1-1.446-.801C5 19.053 5 18.111 5 16.226V7.774c0-1.885 0-2.827.394-3.358a2 2 0 0 1 1.446-.801c.66-.053 1.458.446 3.056 1.445l6.762 4.226Z' stroke='%231A1A1A' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+}
+
+.kdadmin-documentation ul li:nth-child(3) a .cat-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width=%2226%22 height=%2226%22 viewBox=%22-.5 0 25 25%22 fill=%22none%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M12 7.82h10m-20 0h2m16 9h2m-20 0h10m-4-5a4 4 0 100-8 4 4 0 000 8zm8 9a4 4 0 100-8 4 4 0 000 8z%22 stroke=%22%231a1a1a%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E")
+}
+
+.kdadmin-documentation ul li:nth-child(4) a .cat-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m21.28 6.4-9.54 9.54c-.95.95-3.77 1.39-4.4.76-.63-.63-.2-3.45.75-4.4l9.55-9.55a2.58 2.58 0 1 1 3.64 3.65v0Z' stroke='%231A1A1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11 4H6a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4h11c2.21 0 3-1.8 3-4v-5' stroke='%231A1A1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+}
+
+.kdadmin-documentation ul li:nth-child(5) a .cat-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM6.56 21C12.13 8.9 16.76 6.78 22 14.63' stroke='%231A1A1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 3H6a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4Z' stroke='%231A1A1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+}
+
+.kdadmin-documentation ul li:nth-child(6) a .cat-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='-0.5 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 10.79v7.77a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-7.77M3 5.56a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3' stroke='%231A1A1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21 8.56a3 3 0 0 1-6 0M15 8.56a3 3 0 0 1-6 0M9 8.56a3 3 0 1 1-6 0M21 5.56v3M15 5.56v3M9 5.56v3M3 5.56v3M12 15.56v4' stroke='%231A1A1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+}
+
+.kdadmin-documentation ul li:nth-child(7) a .cat-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 17v-.007m0-2.136c0-3.214 3-2.5 3-5C15 8.28 13.657 7 12 7c-1.343 0-2.48.84-2.863 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+}
+
+.kdadmin-documentation ul li:nth-child(8) a .cat-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 19a5 5 0 0 1-5-5m5 5a5 5 0 0 0 5-5m-5 5v-5m-5 0v-2.143c0-.798 0-1.197.112-1.518A2 2 0 0 1 8.34 9.112C8.66 9 9.06 9 9.857 9h4.286c.798 0 1.197 0 1.518.112a2 2 0 0 1 1.227 1.227c.112.321.112.72.112 1.518V14M7 14H4m13 0h3m-3-4 2.5-2.5m-15 13L8 17m-1-7L4.5 7.5m15 13L16 17M14 6V5a2 2 0 1 0-4 0v1h4Z' stroke='%231A1A1A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+}
+
+.kdadmin-documentation ul li:nth-child(9) a .cat-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m7 8-4 3.692L7 16m10-8 4 3.692L17 16M14 4l-4 16' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+}
+
+
+/* --------------------------------------------------------------------------------- 
+8.  RESPONSIVE
+--------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1024px) {
+    .keydesign-welcome-panel .keydesign-theme-thumb {
+        display: none;
+    }
+    .kdadmin-panel-column {
+        margin-bottom: 20px;
+        padding: 20px;
+        margin-right: 0;
+    }
+    .kdadmin-activate-wrapper {
+        flex-direction: column;
+    }
+    .kdadmin-welcome-box {
+        margin-left: 10px;
+        margin-right: 20px;
+        max-width: 100%;
+        width: auto;
+    }
+    .keydesign-notice {
+        max-width: calc(100% - 50px);
+    }
+    .kdadmin-dashboard.kdadmin-import,
+    .keydesign-system-status,
+    .keydesign_page_install-required-plugins .keydesign-plugins {
+        margin-right: 20px;
+    }
+    .kdadmin-help {
+        flex-direction: column;
+    }
+    .kdadmin-support-box,
+    .kdadmin-help .kdadmin-documentation {
+        margin-left: 10px;
+        margin-bottom: 25px;
+        margin-right: 20px;
+    }
+    .kdadmin-documentation ul {
+        max-width: 100%;
+    }
+    .kdadmin-import .ocdi__gl-item-footer {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+    .kdadmin-import .ocdi__gl-item-footer--with-preview h4.ocdi__gl-item-title {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .kdadmin-import .ocdi__gl-item-button.button-primary {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .kdadmin-import .ocdi__gl-item-button {
+        width: 100%;
+    }
+    .kdadmin-import .ocdi__gl-item-container {
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .keydesign-welcome-panel {
+        margin: 30px 20px 30px 10px;
+        max-width: 100%;
+    }
+    .keydesign-welcome-panel .keydesign-theme-thumb {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+    }
+    body.toplevel_page_keydesign-dashboard h1,
+    body[class*='keydesign_page_'] h1 {
+        font-size: 32px;
+    }
+    .keydesign-welcome-panel .welcome-panel-description {
+        font-size: 16px;
+    }
+    .keydesign-dashboard-tabs .keydesign-dashboard-tabs-list li {
+        width: 100%;
+    }
+    .kdadmin-dashboard .kdadmin-column-container h2 {
+        font-size: 22px;
+    }
+    .keydesign-dashboard-tabs .keydesign-dashboard-tabs-list li:last-child a,
+    .kdadmin-panel-column:last-child {
+        margin-bottom: 0;
+    }
+    .keydesign-dashboard-tabs .keydesign-dashboard-tabs-list {
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: var(--admin-cards-border-radius);
+        background: #ffffff;
+        margin-top: 30px;
+        position: relative;
+        box-sizing: border-box;
+        border: 1px solid var(--admin-main-color-border);
+    }
+    .keydesign-dashboard-tabs .keydesign-dashboard-tabs-list a {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .kdadmin-dashboard #mc_embed_signup input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .kdadmin-dashboard #mc_embed_signup .button {
+        margin-left: 0;
+        width: 100%;
+    }
+    .kdadmin-panel-column .support-badge {
+        right: 20px;
+        top: 20px;
+    }
+    .keydesign_page_theme-options .wpcfto-settings {
+        margin: 30px 20px 0 10px;
+        min-width: 720px;
+    }
+    .keydesign_page_theme-options input[type=checkbox],
+    .keydesign_page_theme-options input[type=radio] {
+        height: 1rem;
+        width: 1rem;
+    }
+    .keydesign_page_install-required-plugins .keydesign-plugins .tablenav.top,
+    .keydesign-notice {
+        display: none;
+    }
+    .keydesign_page_theme-options {
+        overflow-x: auto;
+    }
+    .kdadmin-dashboard.kdadmin-import,
+    .kdadmin-support-box,
+    .keydesign-system-status,
+    .keydesign_page_install-required-plugins .keydesign-plugins {
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    .keydesign_page_install-required-plugins .keydesign-plugins .subsubsub {
+        margin-bottom: 20px;
+    }
+    .kdadmin-import .ocdi__gl-item-container {
+        grid-template-columns: auto auto;
+    }
+    .kdadmin-import .ocdi__gl-item-image-container {
+        max-height: initial;
+        aspect-ratio: 1.05;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .kdadmin-dashboard #mc_embed_signup_scroll {
+        flex-direction: column;
+    }
+    .keydesign-system-status-wordpress tr:nth-child(3),
+    .keydesign-system-status-wordpress tr:nth-child(4) {
+        display: none;
+    }
+    .kdadmin-documentation ul {
+        grid-template-columns: auto;
+    }
+    .kdadmin-import .ocdi__gl-item-container {
+        grid-template-columns: auto;
+    }
+}

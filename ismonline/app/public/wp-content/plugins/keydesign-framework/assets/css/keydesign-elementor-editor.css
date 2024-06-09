@@ -1,0 +1,18 @@
+.keydesign-elementor-library .elementor-add-new-section .elementor-add-template-button {
+    background: url(../images/keydesign-logo.jpg);
+    background-size: cover;
+    transition: var(--image-transition);
+}
+
+.keydesign-elementor-library .elementor-add-new-section .elementor-add-template-button:hover {
+    filter: hue-rotate(15deg);
+}
+
+.keydesign-elementor-library .elementor-add-new-section .elementor-add-template-button .eicon-folder {
+    opacity: 0;
+}
+
+.elementskit-add-template-button,
+.notice-elementskit-pro-not-active {
+    display: none!important;
+}

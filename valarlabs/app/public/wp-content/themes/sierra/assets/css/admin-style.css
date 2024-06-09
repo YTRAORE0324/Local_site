@@ -1,0 +1,26 @@
+:root {
+    --admin-main-color: #4353FF;
+    --admin-secondary-color: #1a1a1a;
+    --admin-main-color-light: #F5F5F5;
+    --admin-main-color-border: #e7e7e7;
+    --admin-main-color-transparent: rgb(67 83 255 / 6%);
+    --admin-main-color-heading: #1a1a1a;
+    --admin-main-color-text: #757575;
+    --admin-bg-main-color: #1d2327;
+    --admin-bg-secondary-color: #2c3338;
+    --admin-button-border-radius: 5px;
+    --admin-cards-border-radius: 5px;
+    --admin-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#adminmenu .toplevel_page_keydesign-dashboard .wp-menu-image {
+    background-image: url('../img/thumbnail-menu.png');
+}
+
+#adminmenu .toplevel_page_keydesign-dashboard .wp-menu-name::before {
+    content: 'Sierra';
+}
+
+.wp-admin #adminmenu .toplevel_page_keydesign-dashboard {
+    display: list-item;
+}

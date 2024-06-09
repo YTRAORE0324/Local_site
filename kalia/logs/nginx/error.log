@@ -1,0 +1,10 @@
+2024/05/17 22:06:05 [error] 2700#17336: *7 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: ::1, server: , request: "GET /qui-sommes-nous/ HTTP/1.1", upstream: "fastcgi://127.0.0.1:10039", host: "localhost:10040", referrer: "http://localhost:10040/"
+2024/05/17 22:06:08 [error] 2700#17336: *7 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: ::1, server: , request: "GET /qui-sommes-nous/ HTTP/1.1", upstream: "fastcgi://127.0.0.1:10038", host: "localhost:10040", referrer: "http://localhost:10040/"
+2024/05/17 22:06:08 [error] 2700#17336: *11 no live upstreams while connecting to upstream, client: ::1, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://php", host: "localhost:10040", referrer: "http://localhost:10040/qui-sommes-nous/"
+2024/05/17 22:06:11 [error] 2700#17336: *12 no live upstreams while connecting to upstream, client: ::1, server: , request: "GET /qui-sommes-nous/ HTTP/1.1", upstream: "fastcgi://php", host: "localhost:10040", referrer: "http://localhost:10040/"
+2024/05/17 22:06:11 [error] 2700#17336: *12 no live upstreams while connecting to upstream, client: ::1, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://php", host: "localhost:10040", referrer: "http://localhost:10040/qui-sommes-nous/"
+2024/05/24 05:23:20 [alert] 13292#9432: worker process 5552 exited with code C0000142
+2024/05/24 05:23:20 [alert] 13292#9432: could not respawn worker
+2024/05/24 09:01:16 [alert] 25832#12824: worker process 20360 exited with code C0000142
+2024/05/24 09:01:16 [alert] 25832#12824: could not respawn worker
+2024/06/04 12:50:58 [alert] 22328#21912: OpenEvent("ngx_master_13608") failed (2: The system cannot find the file specified)

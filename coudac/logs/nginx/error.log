@@ -1,0 +1,3 @@
+2024/05/17 22:06:15 [error] 1156#2628: *9 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: ::1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:10020", host: "localhost:10022"
+2024/05/17 22:06:17 [error] 1156#2628: *9 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: ::1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:10021", host: "localhost:10022"
+2024/06/05 11:53:39 [alert] 19716#8276: OpenEvent("ngx_master_7020") failed (2: The system cannot find the file specified)
